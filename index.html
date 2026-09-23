@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#b51f2a">
+  <meta name="description" content="Andréa Souza — Psicóloga e Neuropsicóloga. Atendimento psicológico online e personalizado.">
+  <title>Andréa Souza | Psicóloga e Neuropsicóloga</title>
+
+  <link rel="icon" type="image/jpeg" href="./andreia-souza.jpg">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:#252525;
+      background:#fff;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1100px,92%);margin:auto}
+
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid #eee;
+      backdrop-filter:blur(10px);
+    }
+    nav{
+      min-height:72px;display:flex;align-items:center;
+      justify-content:space-between;gap:20px;
+    }
+    .brand{font-weight:800;color:#b51f2a;letter-spacing:.5px}
+    .brand span{color:#333;font-weight:500}
+    .menu{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+    .menu a{font-size:14px;color:#444}
+    .menu a:hover{color:#b51f2a}
+    .nav-btn,.cta{
+      background:#b51f2a;color:#fff;padding:12px 20px;border-radius:999px;
+      font-weight:700;display:inline-block;border:0;cursor:pointer;
+    }
+
+    .hero{
+      min-height:650px;display:flex;align-items:center;
+      background:
+        radial-gradient(circle at 80% 20%,rgba(181,31,42,.09),transparent 32%),
+        linear-gradient(135deg,#fff 0%,#fff8f8 100%);
+      padding:70px 0;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+    .tag{color:#b51f2a;font-weight:800;letter-spacing:2px;font-size:13px}
+    h1{font-size:clamp(44px,7vw,78px);line-height:.98;margin:12px 0;color:#b51f2a}
+    .hero h2{font-size:clamp(22px,3vw,32px);font-weight:500;margin-bottom:20px}
+    .hero p{font-size:18px;color:#666;max-width:650px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .outline{padding:11px 20px;border:1px solid #b51f2a;color:#b51f2a;border-radius:999px;font-weight:700}
+
+    .portrait-wrap{display:flex;justify-content:center}
+    .portrait{
+      width:min(410px,85vw);aspect-ratio:1;border-radius:50%;
+      object-fit:cover;border:7px solid #fff;outline:2px solid #c94a52;
+      box-shadow:0 20px 55px rgba(0,0,0,.14);
+    }
+
+    section{padding:85px 0}
+    .soft{background:#fff8f8}
+    .section-title{text-align:center;margin-bottom:45px}
+    .section-title .mini{color:#b51f2a;font-size:13px;font-weight:800;letter-spacing:2px}
+    .section-title h2{font-size:clamp(30px,5vw,44px);margin:8px 0}
+    .section-title p{color:#6b6b6b;max-width:700px;margin:auto}
+
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
+    .card{
+      background:#fff;border:1px solid #eee;border-radius:22px;padding:30px;
+      box-shadow:0 10px 35px rgba(0,0,0,.06)
+    }
+    .about h3{font-size:30px;margin-bottom:15px}
+    .about p{color:#666;margin-bottom:15px}
+    .facts{display:grid;gap:12px}
+    .fact{padding:18px;border-left:4px solid #b51f2a;background:#fff8f8;border-radius:10px}
+    .fact strong{display:block}
+
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service{padding:28px;border:1px solid #eee;border-radius:18px;background:#fff}
+    .service .icon{font-size:28px;color:#b51f2a}
+    .service h3{margin:10px 0}
+    .service p{color:#666}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{padding:28px;background:#fff;border-radius:18px;border:1px solid #eee}
+    .number{font-size:38px;font-weight:800;color:#b51f2a}
+
+    /* FEEDBACK */
+    .feedback-section{
+      background:
+        radial-gradient(circle at 10% 20%,rgba(181,31,42,.08),transparent 25%),
+        radial-gradient(circle at 90% 80%,rgba(181,31,42,.06),transparent 28%),
+        #fff8f8;
+    }
+    .feedback-container{max-width:820px;margin:auto}
+    .feedback-icon{
+      width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 18px;
+      border:4px solid #b51f2a;box-shadow:0 10px 28px rgba(0,0,0,.12);background:#fff;
+    }
+    .feedback-icon img{width:100%;height:100%;object-fit:cover}
+    .feedback-label{display:block;text-align:center;color:#b51f2a;font-size:13px;font-weight:800;letter-spacing:3px}
+    .feedback-container h2{text-align:center;font-size:clamp(31px,5vw,46px);margin:8px 0}
+    .feedback-description{text-align:center;color:#666;max-width:650px;margin:0 auto 25px}
+    .heart-feedback{text-align:center;color:#b51f2a;font-size:28px;margin-bottom:25px}
+    .feedback-form{
+      background:#fff;padding:32px;border-radius:22px;
+      box-shadow:0 15px 45px rgba(0,0,0,.08);border:1px solid #eee;
+    }
+    .input-group{margin-bottom:21px}
+    .input-group label{display:block;font-weight:700;margin-bottom:8px}
+    .input-group input[type=text],.input-group textarea{
+      width:100%;padding:14px 15px;border:1px solid #ddd;border-radius:12px;
+      font:inherit;outline:none;background:#fafafa;
+    }
+    .input-group input[type=text]:focus,.input-group textarea:focus{
+      border-color:#b51f2a;background:#fff;box-shadow:0 0 0 3px rgba(181,31,42,.08)
+    }
+    .stars{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:3px}
+    .stars input{display:none}
+    .stars label{font-size:38px;color:#ddd;cursor:pointer;line-height:1}
+    .stars label:hover,.stars label:hover~label,.stars input:checked~label{color:#d6a500}
+    .feedback-button{
+      width:100%;padding:16px;border:0;border-radius:12px;
+      background:#b51f2a;color:#fff;font-weight:800;font-size:16px;cursor:pointer;
+    }
+    .feedback-button:hover{background:#951923}
+    .feedback-note{text-align:center;color:#888;font-size:12px;margin-top:14px}
+
+    .faq{max-width:800px;margin:auto}
+    details{border-bottom:1px solid #ddd;padding:18px 0}
+    summary{cursor:pointer;font-weight:700}
+    details p{color:#666;padding-top:10px}
+
+    footer{background:#1f1f1f;color:#fff;padding:50px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}
+    footer h3{margin-bottom:10px}
+    footer p,footer a{color:#ccc}
+    .copyright{border-top:1px solid #444;margin-top:35px;padding-top:20px;color:#aaa;font-size:13px}
+
+    .whatsapp{
+      position:fixed;right:20px;bottom:20px;z-index:1001;
+      width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+      background:#25d366;color:#fff;font-size:25px;
+      box-shadow:0 8px 25px rgba(0,0,0,.2)
+    }
+
+    @media(max-width:850px){
+      .menu{display:none}
+      .hero-grid,.about{grid-template-columns:1fr}
+      .hero{text-align:center}
+      .hero p{margin:auto}
+      .hero-actions{justify-content:center}
+      .services,.steps{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#inicio">Ψ ANDRÉA SOUZA <span>• PSICOLOGIA</span></a>
+      <div class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#formacao">Formação</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#feedbacks">Feedbacks</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <a class="nav-btn" href="https://wa.me/5521965718806?text=Olá%20Andréa!%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank">Agendar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="tag">CUIDAR DE SI TAMBÉM É UMA ESCOLHA.</div>
+      <h1>ANDRÉA SOUZA</h1>
+      <h2>PSICÓLOGA E NEUROPSICÓLOGA</h2>
+      <p>CRP: 05/78747</p>
+      <p>Atendimento online e personalizado. Um espaço de escuta, acolhimento e cuidado para você compreender melhor suas emoções, pensamentos e experiências.</p>
+      <div class="hero-actions">
+        <a class="cta" href="https://wa.me/5521965718806?text=Olá%20Andréa!%20Gostaria%20de%20agendar%20uma%20sessão." target="_blank">AGENDAR MINHA SESSÃO</a>
+        <a class="outline" href="#sobre">CONHECER O TRABALHO</a>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <img class="portrait" src="./andreia-souza.jpg" alt="Andréa Souza, Psicóloga e Neuropsicóloga">
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container about">
+    <div class="card">
+      <img class="portrait" style="width:100%;outline:none;border:0;box-shadow:none" src="./andreia-souza.jpg" alt="Andréa Souza">
+    </div>
+    <div>
+      <div class="tag">SOBRE</div>
+      <h3>Prazer, sou Andréa Souza.</h3>
+      <p>Sou Andréa Conceição Baldez de Souza, Psicóloga e Neuropsicóloga dedicada à escuta, compreensão e cuidado individualizado.</p>
+      <p>Minha atuação busca compreender cada pessoa em sua singularidade, considerando aspectos emocionais, cognitivos e comportamentais.</p>
+      <p>Meu propósito é oferecer um espaço profissional, acolhedor e humanizado, respeitando a história e as necessidades de cada pessoa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="formacao">
+  <div class="container">
+    <div class="section-title">
+      <div class="mini">FORMAÇÃO</div>
+      <h2>Formação profissional</h2>
+      <p>Conheça as principais formações apresentadas no site.</p>
+    </div>
+    <div class="services">
+      <div class="service"><div class="icon">Ψ</div><h3>Psicologia</h3><p>Centro Universitário Celso Lisboa</p></div>
+      <div class="service"><div class="icon">◉</div><h3>Neuropsicologia</h3><p>Pós-graduação — Universidade Faveni</p></div>
+      <div class="service"><div class="icon">◇</div><h3>Psicologia Aplicada ao Trânsito</h3><p>Pós-graduação — FACPRISMA</p></div>
+    </div>
+    <div class="card" style="margin-top:20px;text-align:center">
+      <strong>Psicanálise</strong><br>Em andamento<br><br>
+      <strong>CRP: 05/78747</strong>
+    </div>
+  </div>
+</section>
+
+<section id="atendimento">
+  <div class="container">
+    <div class="section-title">
+      <div class="mini">ATENDIMENTO</div>
+      <h2>Psicoterapia Online</h2>
+      <p>Um espaço para você se escutar, compreender e cuidar de si.</p>
+    </div>
+    <div class="card" style="max-width:850px;margin:auto;text-align:center">
+      <p>A psicoterapia é um espaço de acolhimento e escuta profissional destinado à compreensão das questões emocionais, comportamentais e relacionais.</p>
+      <p style="margin-top:12px">O atendimento online oferece praticidade e conforto, permitindo realizar sua sessão de onde você estiver, respeitando as condições necessárias para privacidade e sigilo profissional.</p>
+      <p style="margin-top:18px"><strong>Temas apresentados:</strong> ansiedade • baixa autoestima • conflitos familiares • relacionamentos • sobrecarga emocional • autoconhecimento • mudanças importantes • regulação emocional • dificuldades de organização • questões relacionadas à atenção.</p>
+      <a class="cta" style="margin-top:22px" href="https://wa.me/5521965718806?text=Olá%20Andréa!%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia%20online." target="_blank">QUERO CONVERSAR</a>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container">
+    <div class="section-title">
+      <div class="mini">PRIMEIRO CONTATO</div>
+      <h2>Como funciona?</h2>
+      <p>Um caminho simples para iniciar seu atendimento.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="number">01</div><h3>Entre em contato</h3><p>Clique em um dos botões de WhatsApp e envie sua mensagem.</p></div>
+      <div class="step"><div class="number">02</div><h3>Converse sobre sua necessidade</h3><p>Tire suas dúvidas e receba informações sobre o formato do atendimento online.</p></div>
+      <div class="step"><div class="number">03</div><h3>Agende sua sessão</h3><p>Após alinhar as informações necessárias, será combinado o melhor horário.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOVA ÁREA DE FEEDBACK -->
+<section class="feedback-section" id="feedbacks">
+  <div class="container feedback-container">
+    <div class="feedback-icon">
+      <img src="./andreia-souza.jpg" alt="Andréa Souza">
+    </div>
+    <span class="feedback-label">FEEDBACKS</span>
+    <h2>Como foi sua experiência?</h2>
+    <p class="feedback-description">Sua opinião é muito importante. Envie seu comentário sobre a experiência de atendimento.</p>
+    <div class="heart-feedback">♥</div>
+
+    <form class="feedback-form" id="feedbackForm">
+      <div class="input-group">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+      </div>
+
+      <div class="input-group">
+        <label>Avaliação do atendimento</label>
+        <div class="stars" aria-label="Escolha uma avaliação de 1 a 5 estrelas">
+          <input type="radio" id="star5" name="avaliacao" value="5" required><label for="star5">★</label>
+          <input type="radio" id="star4" name="avaliacao" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="avaliacao" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="avaliacao" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="avaliacao" value="1"><label for="star1">★</label>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="mensagem">Seu comentário</label>
+        <textarea id="mensagem" rows="5" placeholder="Conte como foi sua experiência..." required></textarea>
+      </div>
+
+      <button class="feedback-button" type="submit">ENVIAR FEEDBACK ♥</button>
+      <p class="feedback-note">Ao enviar, o WhatsApp será aberto com o feedback preenchido para envio à profissional.</p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-title">
+      <div class="mini">DÚVIDAS FREQUENTES</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details><summary>O atendimento é online?</summary><p>Sim. O atendimento apresentado neste site é realizado online, com atenção às condições necessárias de privacidade e sigilo profissional.</p></details>
+      <details><summary>Como faço para agendar?</summary><p>Clique em qualquer botão de agendamento ou no botão flutuante do WhatsApp para iniciar o contato.</p></details>
+      <details><summary>Quais assuntos podem ser trabalhados?</summary><p>Entre os temas apresentados estão ansiedade, autoestima, relacionamentos, conflitos familiares, sobrecarga emocional, autoconhecimento, mudanças importantes, regulação emocional, organização e questões relacionadas à atenção.</p></details>
+      <details><summary>Como saber valores e horários?</summary><p>Valores e disponibilidade podem ser informados diretamente pelo WhatsApp.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="contato">
+  <div class="container">
+    <div class="section-title">
+      <div class="mini">CONTATO</div>
+      <h2>Vamos conversar?</h2>
+      <p>Entre em contato para saber mais sobre o atendimento psicológico online.</p>
+    </div>
+    <div class="card" style="max-width:650px;margin:auto;text-align:center">
+      <p><strong>WhatsApp:</strong> (21) 96571-8806</p>
+      <p><strong>Instagram:</strong> @psiandreabaldez</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="cta" href="https://wa.me/5521965718806" target="_blank">WHATSAPP</a>
+        <a class="outline" href="https://www.instagram.com/psiandreabaldez/" target="_blank">INSTAGRAM</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Andréa Souza</h3>
+        <p>Psicóloga e Neuropsicóloga</p>
+        <p>CRP: 05/78747</p>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <a href="#atendimento">Psicoterapia Online</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <a href="https://wa.me/5521965718806" target="_blank">(21) 96571-8806</a><br>
+        <a href="https://www.instagram.com/psiandreabaldez/" target="_blank">@psiandreabaldez</a>
+      </div>
+    </div>
+    <div class="copyright">© Andréa Souza. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5521965718806" target="_blank" aria-label="WhatsApp">☏</a>
+
+<script>
+  document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+    const avaliacao = document.querySelector('input[name="avaliacao"]:checked');
+
+    if (!nome || !mensagem || !avaliacao) {
+      alert("Por favor, preencha seu nome, avaliação e comentário.");
+      return;
+    }
+
+    const estrelas = "★".repeat(Number(avaliacao.value)) + "☆".repeat(5 - Number(avaliacao.value));
+
+    const texto =
+      "Olá, Andréa! Gostaria de enviar um feedback sobre o atendimento.%0A%0A" +
+      "Nome: " + encodeURIComponent(nome) + "%0A" +
+      "Avaliação: " + encodeURIComponent(estrelas) + "%0A%0A" +
+      "Comentário:%0A" + encodeURIComponent(mensagem);
+
+    window.open("https://wa.me/5521965718806?text=" + texto, "_blank");
+  });
+</script>
+
+</body>
+</html>
